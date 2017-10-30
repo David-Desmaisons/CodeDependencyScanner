@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <!--Project was exported from assembly: D:\temp\NSplit\Depender\Depender.Parser.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4F7E0C60-13E1-402A-B79B-4CF337885CBA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Depender.Parser</AssemblyName>
+    <RootNamespace>ClrTest.Reflection</RootNamespace>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ILReader.cs" />
+    <Compile Include="ITokenResolver.cs" />
+    <Compile Include="ModuleScopeTokenResolver.cs" />
+    <Compile Include="IILStringCollector.cs" />
+    <Compile Include="ReadableILStringToTextWriter.cs" />
+    <Compile Include="RawILStringToTextWriter.cs" />
+    <Compile Include="ILInstructionVisitor.cs" />
+    <Compile Include="ReadableILStringVisitor.cs" />
+    <Compile Include="RawILStringVisitor.cs" />
+    <Compile Include="IILProvider.cs" />
+    <Compile Include="MethodBaseILProvider.cs" />
+    <Compile Include="MethodBodyInfo.cs" />
+    <Compile Include="IFormatProvider.cs" />
+    <Compile Include="DefaultFormatProvider.cs" />
+    <Compile Include="ILInstruction.cs" />
+    <Compile Include="InlineNoneInstruction.cs" />
+    <Compile Include="InlineBrTargetInstruction.cs" />
+    <Compile Include="ShortInlineBrTargetInstruction.cs" />
+    <Compile Include="InlineSwitchInstruction.cs" />
+    <Compile Include="InlineIInstruction.cs" />
+    <Compile Include="InlineI8Instruction.cs" />
+    <Compile Include="ShortInlineIInstruction.cs" />
+    <Compile Include="InlineRInstruction.cs" />
+    <Compile Include="ShortInlineRInstruction.cs" />
+    <Compile Include="InlineFieldInstruction.cs" />
+    <Compile Include="InlineMethodInstruction.cs" />
+    <Compile Include="InlineTypeInstruction.cs" />
+    <Compile Include="InlineSigInstruction.cs" />
+    <Compile Include="InlineTokInstruction.cs" />
+    <Compile Include="InlineStringInstruction.cs" />
+    <Compile Include="InlineVarInstruction.cs" />
+    <Compile Include="ShortInlineVarInstruction.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

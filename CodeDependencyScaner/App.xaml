@@ -1,0 +1,11 @@
+﻿<chromiumFxInfra:ChromiumFxWebBrowserApp x:Class="CodeVizualization.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CodeVizualization"
+             xmlns:neutronium="clr-namespace:Neutronium.WPF;assembly=Neutronium.WPF" 
+             xmlns:chromiumFxInfra="clr-namespace:Neutronium.WebBrowserEngine.ChromiumFx;assembly=Neutronium.WebBrowserEngine.ChromiumFx" 
+             StartupUri="MainWindow.xaml">
+    <chromiumFxInfra:ChromiumFxWebBrowserApp.Resources>
+        <neutronium:BoolToHiddenConverter x:Key="BoolToHidden"/>
+    </chromiumFxInfra:ChromiumFxWebBrowserApp.Resources>
+</chromiumFxInfra:ChromiumFxWebBrowserApp>
