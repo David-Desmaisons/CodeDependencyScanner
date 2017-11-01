@@ -1,18 +1,17 @@
 CodeDependencyScanner
 ====================
 
-CodeDependencyScanner is C# desktop application that analyse .Net assembly.<br>
+C# desktop application that analyses .Net assembly.<br>
 It lets you browse types relationship and introspect code dependencies <br>
 
 ![inspect](./images/scanner.gif)
 
 
-Made with [Neutronium](https://github.com/NeutroniumCore/Neutronium), [Vue.js]() and [D3.js]()
-
+Made with [Neutronium](https://github.com/NeutroniumCore/Neutronium), [Vue.js](https://vuejs.org) and [D3.js](https://d3js.org).
 <p>
-    <img width="80"src="./logo/Neutronium.png">
-    <img width="80"src="./logo/Vue.png">
-    <img width="80"src="./logo/D3.jpg">
+    <img width="70"src="./logo/Neutronium.png">
+    <img width="70"src="./logo/Vue.png">
+    <img width="70"src="./logo/D3.jpg">
 </p>
 
 
