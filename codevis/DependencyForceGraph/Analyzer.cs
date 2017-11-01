@@ -59,7 +59,7 @@ namespace Gma.CodeVisuals.Generator.DependencyForceGraph
             m_Tree = BuildTree(types, rootName);
             var nodesById = m_Tree.Nodes.Reverse().ToArray();
             m_Matrix = new AdjacencyMatrix(nodesById.Length);
-            m_OnProgres?.Invoke(new AnalyzesProgress(string.Format("{0} types found.", types.Length), 0, 1, false));
+            m_OnProgres?.Invoke(new AnalyzesProgress($"{types.Length} types found.", 0, 1, false));
             if (types.Length == 0) return;
             DoAnalyzeTasks(types, cancellationToken);
         }

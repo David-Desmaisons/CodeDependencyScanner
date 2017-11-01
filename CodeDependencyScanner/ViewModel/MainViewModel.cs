@@ -63,14 +63,7 @@ namespace CodeDependencyScanner.ViewModel
         public ISimpleCommand ChooseFile => _FilePicker;
         public ICommand Compute => _GraphLoader.Run;
         public ISimpleCommand Cancel => _GraphLoader.Cancel;
-
-        public IGraphBuilder IGraphBuilder
-        {
-            get
-            {
-                return _IGraphBuilder;
-            }
-        }
+        public IGraphBuilder IGraphBuilder => _IGraphBuilder;
 
         public MainViewModel(IGraphBuilder builder, IFileChooserCommand filePicker, IWindowViewModel window)
         {
