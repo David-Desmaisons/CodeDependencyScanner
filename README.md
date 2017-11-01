@@ -24,6 +24,6 @@ Made with [Neutronium](https://github.com/NeutroniumCore/Neutronium), [Vue.js](h
 
 ![inspect](./images/I4.png)
 
-![inspect](./images/I2.png)
+![inspect](./images/I6.png)
 
 ![inspect](./images/I3.png)
