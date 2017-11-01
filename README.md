@@ -17,15 +17,13 @@ Made with [Neutronium](https://github.com/NeutroniumCore/Neutronium), [Vue.js]()
 ![inspect](./images/scanner.gif)
 
 
-
-
-
-
-
-
 # Screen shots
 
 ![inspect](./images/I1.png)
+
+![inspect](./images/I5.png)
+
+![inspect](./images/I4.png)
 
 ![inspect](./images/I2.png)
 
