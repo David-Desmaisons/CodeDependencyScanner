@@ -212,10 +212,16 @@
     <None Include="View\MainView\src\App.vue" />
     <None Include="View\MainView\src\components\applicationBar.vue" />
     <None Include="View\MainView\src\components\applicationheader.vue" />
-    <None Include="View\MainView\src\components\applicationMenu.vue" />
+    <None Include="View\MainView\src\components\applicationLeftMenu.vue" />
+    <None Include="View\MainView\src\components\applicationMainMenu.vue" />
+    <None Include="View\MainView\src\components\applicationNotification.vue" />
+    <None Include="View\MainView\src\components\assemblyDetail.vue" />
     <None Include="View\MainView\src\components\buttoncommand.vue" />
+    <None Include="View\MainView\src\components\buttonExecute.vue" />
     <None Include="View\MainView\src\components\filechooser.vue" />
-    <None Include="View\MainView\src\components\mainform.vue" />
+    <None Include="View\MainView\src\components\importModal.vue" />
+    <None Include="View\MainView\src\components\nodeFinder.vue" />
+    <None Include="View\MainView\src\components\nodeInfo.vue" />
     <None Include="View\MainView\src\components\progressDisplayer.vue" />
     <Content Include="View\MainView\dist\912ec66d7572ff821749319396470bde.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -234,10 +240,12 @@
     </Content>
     <Content Include="View\MainView\index.html" />
     <None Include="View\MainView\src\components\simplebutton.vue" />
+    <None Include="View\MainView\src\components\transitionSlideUp.vue" />
     <Resource Include="View\MainView\src\assets\logo.png" />
     <Resource Include="View\MainView\src\assets\graph_light.ico" />
     <Resource Include="View\MainView\src\assets\graph_light.png" />
     <Content Include="View\MainView\src\entry.js" />
+    <Content Include="View\MainView\src\infra\comparator.js" />
     <Content Include="View\MainView\src\install.js" />
     <Content Include="View\MainView\src\main.js" />
     <Content Include="View\MainView\utils.js" />
