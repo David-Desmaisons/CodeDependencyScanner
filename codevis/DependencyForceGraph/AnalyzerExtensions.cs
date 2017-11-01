@@ -32,7 +32,12 @@ namespace Gma.CodeVisuals.Generator.DependencyForceGraph
             return
                 Once(type.BaseType)
                     .Concat(type.GetInterfaces())
-                    .Select(baseType => new Implements(type, baseType));
+                    .Select(baseType => new Implements(type, GetUnderlyingGeneric(baseType)));
+        }
+
+        private static Type GetUnderlyingGeneric(Type type)
+        {
+            return type.IsGenericType ? type.GetGenericTypeDefinition() : type;
         }
 
         public static IEnumerable<Dependency> Calls(this Type type)
@@ -41,7 +46,7 @@ namespace Gma.CodeVisuals.Generator.DependencyForceGraph
                 type
                     .Methods()
                     .SelectMany(method => method.MethodCalls())
-                    .Select(methodCall => new MethodCall(type, methodCall.ReflectedType, methodCall))
+                    .Select(methodCall => new MethodCall(type, GetUnderlyingGeneric(methodCall.ReflectedType), methodCall))
                     .Where(call => call.Target != type);
         }
 
@@ -61,7 +66,7 @@ namespace Gma.CodeVisuals.Generator.DependencyForceGraph
             return
                 fieldUses
                     .Concat(methodUses)
-                    .Select(to => new Uses(type, to))
+                    .Select(to => new Uses(type, GetUnderlyingGeneric(to)))
                     .Where(uses => uses.Target != type);
         }
 
@@ -70,7 +75,7 @@ namespace Gma.CodeVisuals.Generator.DependencyForceGraph
             return
                 type
                     .GetNestedTypes()
-                    .Select(nested => new Contains(type, nested))
+                    .Select(nested => new Contains(type, GetUnderlyingGeneric(nested)))
                     .Where(contains => contains.Target != type);
         }
 
