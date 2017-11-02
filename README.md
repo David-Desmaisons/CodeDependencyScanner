@@ -3,7 +3,6 @@ CodeDependencyScanner
 
 C# desktop application that analyses .Net assembly.<br>
 It lets you browse types relationship and introspect code dependencies.<br>
-Originally inspired by [codegravity](https://github.com/fgreinacher/codegravity).<br>
 
 ![inspect](./images/scanner.gif)
 
@@ -15,6 +14,7 @@ Made with [Neutronium](https://github.com/NeutroniumCore/Neutronium), [Vue.js](h
     <img width="70"src="./logo/D3.jpg">
 </p>
 
+Originally inspired by [codegravity](https://github.com/fgreinacher/codegravity).<br>
 
 
 # Screen shots
