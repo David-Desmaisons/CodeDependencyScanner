@@ -1,5 +1,4 @@
-﻿using Micro.MVVM.Relay;
-using Neutronium.MVVMComponents;
+﻿using Neutronium.MVVMComponents;
 using Neutronium.MVVMComponents.Relay;
 using System;
 using System.Reactive.Linq;
@@ -35,7 +34,7 @@ namespace Micro.MVVM.Async
             }
         }
 
-        private RelayCommand _Run;
+        private readonly RelayToogleCommand _Run;
         public ICommand Run => _Run;
 
         public ISimpleCommand Cancel { get;  }
@@ -44,18 +43,18 @@ namespace Micro.MVVM.Async
         private event EventHandler<CommandResult<TResult>> _OnResult;
         private CancellationTokenSource _CancellationTokenSource;
 
-        public TaskCommandBase()
+        protected TaskCommandBase()
         {
             Results = Observable.FromEventPattern<CommandResult<TResult>>(evt => _OnResult += evt, evt => _OnResult -= evt) 
                                 .Select(evtArg => evtArg.EventArgs);
 
             Cancel = new RelaySimpleCommand(DoCancel);
-            _Run = new RelayCommand(DoCompute);
+            _Run = new RelayToogleCommand(DoCompute);
         }
 
         private void UpdateCommandStatus()
         {
-            _Run.Executable = !_Computing && CanBeRun;
+            _Run.ShouldExecute = !_Computing && CanBeRun;
         }
 
         private void DoCancel()
