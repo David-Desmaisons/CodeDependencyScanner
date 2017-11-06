@@ -2,7 +2,6 @@
 using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Windows;
 using Microsoft.Win32;
 
 namespace Micro.MVVM.WPFHelper
