@@ -1,18 +1,18 @@
 ﻿using Gma.CodeVisuals.Generator.Api;
 using Gma.CodeVisuals.Generator.DependencyForceGraph;
-using Micro.MVVM;
-using Micro.MVVM.Async;
-using Micro.MVVM.WPFHelper;
 using Neutronium.MVVMComponents;
 using System;
 using System.Windows.Input;
 using CodeDependencyScanner.ViewModel.Infra;
+using Vm.Tools.Dialog;
+using Vm.Tools.Async;
+using Neutronium.WPF.ViewModel;
 
 namespace CodeDependencyScanner.ViewModel
 {
-    public class MainViewModel : ViewModelBase
+    public class MainViewModel : Vm.Tools.ViewModel 
     {
-        private readonly IFileChooserCommand _FilePicker;
+        private readonly IChooserCommand<IFilePicker> _FilePicker;
         private readonly IGraphBuilder _IGraphBuilder;
         private readonly TaskCommand<AnalyseResult, AnalyzesProgress> _GraphLoader;
 
@@ -25,7 +25,7 @@ namespace CodeDependencyScanner.ViewModel
             set
             {
                 if (Set(ref _Path, value))
-                    _GraphLoader.CanBeRun = !string.IsNullOrEmpty(value);
+                    _GraphLoader.CanBeExecuted = !string.IsNullOrEmpty(value);
             }
         }
 
@@ -60,24 +60,24 @@ namespace CodeDependencyScanner.ViewModel
             set { Set(ref _Message, value); }
         }
 
-        public ISimpleCommand ChooseFile => _FilePicker;
+        public ICommandWithoutParameter ChooseFile => _FilePicker;
         public ICommand Compute => _GraphLoader.Run;
         public ISimpleCommand Cancel => _GraphLoader.Cancel;
         public IGraphBuilder IGraphBuilder => _IGraphBuilder;
 
-        public MainViewModel(IGraphBuilder builder, IFileChooserCommand filePicker, IWindowViewModel window)
+        public MainViewModel(IGraphBuilder builder, IChooserCommand<IFilePicker> filePicker, IWindowViewModel window)
         {
             Window = window;
             _IGraphBuilder = builder;
             _FilePicker = filePicker;
-            _FilePicker.Setter = path => Path = path;
-            _FilePicker.FilePicker.Extensions = new [] { ".dll", ".exe" };          
-            _FilePicker.FilePicker.ExtensionDescription = "C# assembly";
+            _FilePicker.Results.Subscribe(path => Path = path);
+            _FilePicker.Picker.Extensions = new [] { ".dll", ".exe" };          
+            _FilePicker.Picker.ExtensionDescription = "C# assembly";
 
             _GraphLoader = new TaskCommand<AnalyseResult, AnalyzesProgress>(
                 (cancellationToken, progress) => _IGraphBuilder.GenerateFromAssembly(Path, cancellationToken, progress))
             {
-                CanBeRun = false
+                CanBeExecuted = false
             };
             _GraphLoader.Progress.Subscribe(OnProgress);
             _GraphLoader.Results.Subscribe(OnGraphResult);

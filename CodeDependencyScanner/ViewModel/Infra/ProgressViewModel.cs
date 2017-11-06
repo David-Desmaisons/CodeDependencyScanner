@@ -1,8 +1,6 @@
-﻿using Micro.MVVM;
-
-namespace CodeDependencyScanner.ViewModel.Infra
+﻿namespace CodeDependencyScanner.ViewModel.Infra
 {
-    public class ProgressViewModel : ViewModelBase
+    public class ProgressViewModel : Vm.Tools.ViewModel
     {
         private int _Current;
         public int Current

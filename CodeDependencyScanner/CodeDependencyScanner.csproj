@@ -72,6 +72,12 @@
       <HintPath>..\packages\Unofficial.Chromiumfx.3.2924.3\lib\ChromiumWebBrowser.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Windows7APICodePack-Core.1.1.0.0\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Windows7APICodePack-Shell.1.1.0.0\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
     <Reference Include="MoreCollection, Version=1.2.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MoreCollection.1.2.2\lib\net45\MoreCollection.dll</HintPath>
       <Private>True</Private>
@@ -115,6 +121,10 @@
       <HintPath>..\packages\System.Reactive.PlatformServices.3.1.1\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Reactive.Windows.Threading, Version=3.0.1000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Windows.Threading.3.1.1\lib\net45\System.Reactive.Windows.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -124,6 +134,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Vm.Tools, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\packages\Vm.Tools.1.0.0\lib\Vm.Tools.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
@@ -135,12 +148,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModel\GraphViewModel.cs" />
-    <Compile Include="ViewModel\Infra\IWindowViewModel.cs" />
     <Compile Include="ViewModel\Infra\Message.cs" />
     <Compile Include="ViewModel\LinkTypeDescription.cs" />
     <Compile Include="ViewModel\Infra\Progress.cs" />
     <Compile Include="ViewModel\Infra\ProgressViewModel.cs" />
-    <Compile Include="ViewModel\Infra\WindowViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -264,10 +275,6 @@
     <ProjectReference Include="..\codevis\codevis.csproj">
       <Project>{3cba0e73-9f7b-4f72-9fbb-44d123b37806}</Project>
       <Name>codevis</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Micro.MVVM\Micro.MVVM.csproj">
-      <Project>{a9364adb-1998-425e-ab81-5276bde049b4}</Project>
-      <Name>Micro.MVVM</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
