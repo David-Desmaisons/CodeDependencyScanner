@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Windows;
 using CodeDependencyScanner.ViewModel;
-using CodeDependencyScanner.ViewModel.Infra;
 using Gma.CodeVisuals.Generator.Api;
 using Neutronium.WPF.ViewModel;
-using Vm.Tools.Dialog;
+using Vm.Tools.Dialog.FileChooser;
 
 namespace CodeDependencyScanner
 {
@@ -22,7 +21,7 @@ namespace CodeDependencyScanner
 
         private void InitDataContext()
         {
-            var command = new ChooserCommand<IFilePicker>(new FilePicker());
+            var command = new FileChooserCommand();
             var builder = new GraphBuilder();
             var window = new WindowViewModel(this);
             DataContext = new MainViewModel(builder, command, window);

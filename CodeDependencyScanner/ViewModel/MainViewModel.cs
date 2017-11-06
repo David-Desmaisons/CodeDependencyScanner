@@ -4,7 +4,7 @@ using Neutronium.MVVMComponents;
 using System;
 using System.Windows.Input;
 using CodeDependencyScanner.ViewModel.Infra;
-using Vm.Tools.Dialog;
+using Vm.Tools.Dialog.FileChooser;
 using Vm.Tools.Async;
 using Neutronium.WPF.ViewModel;
 
@@ -12,7 +12,7 @@ namespace CodeDependencyScanner.ViewModel
 {
     public class MainViewModel : Vm.Tools.ViewModel 
     {
-        private readonly IChooserCommand<IFilePicker> _FilePicker;
+        private readonly FileChooserCommand _FilePicker;
         private readonly IGraphBuilder _IGraphBuilder;
         private readonly TaskCommand<AnalyseResult, AnalyzesProgress> _GraphLoader;
 
@@ -65,12 +65,12 @@ namespace CodeDependencyScanner.ViewModel
         public ISimpleCommand Cancel => _GraphLoader.Cancel;
         public IGraphBuilder IGraphBuilder => _IGraphBuilder;
 
-        public MainViewModel(IGraphBuilder builder, IChooserCommand<IFilePicker> filePicker, IWindowViewModel window)
+        public MainViewModel(IGraphBuilder builder, FileChooserCommand filePicker, IWindowViewModel window)
         {
             Window = window;
             _IGraphBuilder = builder;
             _FilePicker = filePicker;
-            _FilePicker.Results.Subscribe(path => Path = path);
+            _FilePicker.Results.Subscribe(path => Path = path.Result);
             _FilePicker.Picker.Extensions = new [] { ".dll", ".exe" };          
             _FilePicker.Picker.ExtensionDescription = "C# assembly";
 
