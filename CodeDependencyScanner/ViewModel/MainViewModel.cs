@@ -74,8 +74,7 @@ namespace CodeDependencyScanner.ViewModel
             _FilePicker.Picker.Extensions = new [] { ".dll", ".exe" };          
             _FilePicker.Picker.ExtensionDescription = "C# assembly";
 
-            _GraphLoader = new TaskCommand<AnalyseResult, AnalyzesProgress>(
-                (cancellationToken, progress) => _IGraphBuilder.GenerateFromAssembly(Path, cancellationToken, progress))
+            _GraphLoader = new TaskCommand<AnalyseResult, AnalyzesProgress>((cancellationToken, progress) => _IGraphBuilder.GenerateFromAssembly(Path, cancellationToken, progress))
             {
                 CanBeExecuted = false
             };
@@ -97,8 +96,10 @@ namespace CodeDependencyScanner.ViewModel
             if (result.Success)
             {
                 Graph = new GraphViewModel(result.Result, LinkTypeDescription.Descriptions);
+                return;
             }
-            else if (result.HasError)
+
+            if (result.HasError)
             {
                 Message = Message.Error("Error during import", $"Unhandled exception: {result.Exception.Message}");
             }

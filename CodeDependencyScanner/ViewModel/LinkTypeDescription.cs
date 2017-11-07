@@ -18,7 +18,7 @@ namespace CodeDependencyScanner.ViewModel
             this.outName = outName;
         }
 
-        public static LinkTypeDescription[] Descriptions { get; } = new[]
+        public static LinkTypeDescription[] Descriptions { get; } = 
         {
             new LinkTypeDescription(DependencyKinds.Contains, "contains", "is contained by"),
             new LinkTypeDescription(DependencyKinds.Implements, "implements", "is implemented by"),

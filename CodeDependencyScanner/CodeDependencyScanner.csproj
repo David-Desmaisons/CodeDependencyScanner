@@ -151,7 +151,6 @@
     <Compile Include="ViewModel\GraphViewModel.cs" />
     <Compile Include="ViewModel\Infra\Message.cs" />
     <Compile Include="ViewModel\LinkTypeDescription.cs" />
-    <Compile Include="ViewModel\Infra\Progress.cs" />
     <Compile Include="ViewModel\Infra\ProgressViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
