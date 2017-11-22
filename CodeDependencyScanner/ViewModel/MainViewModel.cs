@@ -60,7 +60,7 @@ namespace CodeDependencyScanner.ViewModel
             set { Set(ref _Message, value); }
         }
 
-        public ICommandWithoutParameter ChooseFile => _FilePicker;
+        public ICommandWithoutParameter ChooseFile => _FilePicker.Choose;
         public ICommand Compute => _GraphLoader.Run;
         public ISimpleCommand Cancel => _GraphLoader.Cancel;
         public IGraphBuilder IGraphBuilder => _IGraphBuilder;
@@ -70,7 +70,7 @@ namespace CodeDependencyScanner.ViewModel
             Window = window;
             _IGraphBuilder = builder;
             _FilePicker = filePicker;
-            _FilePicker.Results.Subscribe(path => Path = path.Result);
+            _FilePicker.Results.Subscribe(path => Path = path);
             _FilePicker.Picker.Extensions = new [] { ".dll", ".exe" };          
             _FilePicker.Picker.ExtensionDescription = "C# assembly";
 
