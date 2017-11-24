@@ -65,7 +65,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="ChromiumFXRenderProcess, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <HintPath>..\packages\Neutronium.WebBrowserEngine.ChromiumFx.1.0.0\lib\ChromiumFXRenderProcess.exe</HintPath>
+      <HintPath>..\packages\Neutronium.WebBrowserEngine.ChromiumFx.1.0.1\lib\ChromiumFXRenderProcess.exe</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ChromiumWebBrowser, Version=3.2924.0.0, Culture=neutral, processorArchitecture=x86">
@@ -94,8 +94,8 @@
       <HintPath>..\packages\Neutronium.MVVMComponents.1.0.0\lib\Neutronium.MVVMComponents.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Neutronium.WebBrowserEngine.ChromiumFx, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <HintPath>..\packages\Neutronium.WebBrowserEngine.ChromiumFx.1.0.0\lib\Neutronium.WebBrowserEngine.ChromiumFx.dll</HintPath>
+    <Reference Include="Neutronium.WebBrowserEngine.ChromiumFx, Version=1.0.1.0, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\packages\Neutronium.WebBrowserEngine.ChromiumFx.1.0.1\lib\Neutronium.WebBrowserEngine.ChromiumFx.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Neutronium.WPF, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
