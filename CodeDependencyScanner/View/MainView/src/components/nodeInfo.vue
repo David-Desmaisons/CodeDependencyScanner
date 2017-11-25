@@ -15,7 +15,7 @@
 
     <div class="description node-info-bar-description">
       <div class="ui relaxed divided list">
-        <div class="item" v-for="(value, key) in nodeLinks" :key="value">
+        <div class="item" v-for="(value, key) in nodeLinks" :key="key">
           <div class="content">
             <div class="header">{{key}}</div>
                 <a v-for="linked in value" class="ui blue image label wrapped-content" @click="select(linked)" :key="linked.data.text">{{linked.data.text}}</a>

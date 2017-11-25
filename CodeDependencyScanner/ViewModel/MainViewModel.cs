@@ -24,6 +24,9 @@ namespace CodeDependencyScanner.ViewModel
             get { return _Path; }
             set
             {
+                if (value == null)
+                    return;
+
                 if (Set(ref _Path, value))
                     _GraphLoader.CanBeExecuted = !string.IsNullOrEmpty(value);
             }
