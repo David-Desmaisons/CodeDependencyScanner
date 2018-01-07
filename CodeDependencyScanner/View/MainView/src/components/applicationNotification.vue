@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper application-notification">
     <notifications group="app" :reverse="true" position="top center" :width="700">
-      <template slot="body" scope="props">
+      <template slot="body" slot-scope="props">
         <div class="ui icon message" :class="props.item.type">
           <i :class="[icon(props.item.type), 'icon']"></i>
           <i class="close icon" @click="props.close"></i>

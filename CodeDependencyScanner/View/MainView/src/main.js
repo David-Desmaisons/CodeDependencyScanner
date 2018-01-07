@@ -1,18 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
 import rawVm from '../data/simple'
-import CircularJson from 'circular-json'
 import {install} from './install'
+import { createVM } from 'neutronium-vm-loader'
 
-function updateVm(vm) {
-    var window = vm.__window__
-    if (window) {
-        delete vm.__window__
-        return { ViewModel: vm, Window: window }
-    }
-    return vm;
-}
-const vm = updateVm(CircularJson.parse(rawVm));
+const vm = createVM(rawVm);
 
 install(Vue)
 new Vue({
