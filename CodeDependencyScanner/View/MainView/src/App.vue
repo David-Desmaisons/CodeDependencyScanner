@@ -220,5 +220,6 @@ export default {
 .root-app {
   height: 100%;
   overflow: hidden;
+  -webkit-app-region: no-drag;
 }
 </style>
