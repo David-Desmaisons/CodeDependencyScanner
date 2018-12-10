@@ -17,7 +17,7 @@
         <neutronium:Chromeless />
     </i:Interaction.Behaviors>
     <Grid>
-        <neutronium:HTMLViewControl IsDebug="True" x:Name="HtmlView" RelativeSource="View\MainView\dist\index.html" />
+        <neutronium:HTMLViewControl IsDebug="True" x:Name="HtmlView" Uri="pack://application:,,,/View/MainView/dist/index.html" />
     </Grid>
     <Window.Visibility>
         <Binding ElementName="HtmlView" Path="IsHTMLLoaded" Converter="{StaticResource BoolToHidden}"/>

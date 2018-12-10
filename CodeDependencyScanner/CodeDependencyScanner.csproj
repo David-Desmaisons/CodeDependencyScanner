@@ -39,6 +39,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
@@ -196,21 +197,11 @@
     <None Include="View\MainView\data\vm1.cjson" />
     <None Include="View\MainView\data\vm2.cjson" />
     <None Include="View\MainView\data\vm3.cjson" />
-    <Content Include="View\MainView\dist\674f50d287a8c48dc19ba404d20fe713.eot">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="View\MainView\dist\af7ae505a9eed503f8b8e6982036873e.woff2">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="View\MainView\dist\b06871f281fee6b241d60582ae9369b9.ttf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="View\MainView\dist\fee66e712a8a08eef5805a46892932ad.woff">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="View\MainView\dist\styles.css.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Resource Include="View\MainView\dist\674f50d287a8c48dc19ba404d20fe713.eot" />
+    <Resource Include="View\MainView\dist\af7ae505a9eed503f8b8e6982036873e.woff2" />
+    <Resource Include="View\MainView\dist\b06871f281fee6b241d60582ae9369b9.ttf" />
+    <Resource Include="View\MainView\dist\fee66e712a8a08eef5805a46892932ad.woff" />
+    <Resource Include="View\MainView\dist\styles.css.map" />
     <None Include="View\MainView\package-lock.json" />
     <None Include="View\MainView\package.json" />
     <None Include="View\MainView\README.md" />
@@ -229,21 +220,11 @@
     <None Include="View\MainView\src\components\nodeFinder.vue" />
     <None Include="View\MainView\src\components\nodeInfo.vue" />
     <None Include="View\MainView\src\components\progressDisplayer.vue" />
-    <Content Include="View\MainView\dist\912ec66d7572ff821749319396470bde.svg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="View\MainView\dist\9c74e172f87984c48ddf5c8108cabe67.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="View\MainView\dist\build.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="View\MainView\dist\index.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="View\MainView\dist\styles.css">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Resource Include="View\MainView\dist\912ec66d7572ff821749319396470bde.svg" />
+    <Resource Include="View\MainView\dist\9c74e172f87984c48ddf5c8108cabe67.png" />
+    <Resource Include="View\MainView\dist\build.js" />
+    <Resource Include="View\MainView\dist\index.html" />
+    <Resource Include="View\MainView\dist\styles.css" />
     <Content Include="View\MainView\index.html" />
     <None Include="View\MainView\src\components\simplebutton.vue" />
     <None Include="View\MainView\src\components\transitionSlideUp.vue" />
